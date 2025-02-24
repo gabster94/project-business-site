@@ -41,72 +41,86 @@
 
       <form action="http://httpbin.org/anything" method="post">
         <fieldset class="form-fieldset">
+          <legend>Personal Information</legend>
           
           <label class="fname">
             <span>First name</span>
             <input 
+            id="fname"
             class="fill-out-form" 
             required type="text" 
             name="fname" 
-            placeholder="First name">
+            placeholder="Your first name"
+            autocomplete="given-name">
           </label>
-          
+
           <label class="lname">
             <span>Last name</span>
             <input 
+            id="lname"
             class="fill-out-form" 
             required type="text" 
             name="lname" 
-            placeholder="Last name">
+            placeholder="Your last name"
+            autocomplete="family-name">
           </label>
           
           <label class="email">
             <span>Email adress</span>
             <input 
+            id="email"
             class="fill-out-form" 
             required type="email" 
-            name="email-adress" 
-            placeholder="Email address">
+            name="Your email-adress" 
+            placeholder="Email address"
+            autocomplete="email">
           </label>
           
           <label class="phone">
             <span>Phone</span>
             <input 
+            id="phone"
             class="fill-out-form" 
             required
             type="tel" 
             name="phone" 
-            placeholder="Phone">
+            placeholder="Your phone number"
+            autocomplete="tel">
           </label>
 
           <label class="password">
             <span>Password</span>
             <input 
+            id="password"
             class="fill-out-form" 
             required type="password" 
             name="password" 
             minlength="8" 
-            placeholder="Password">
+            placeholder="Your password"
+            autocomplete="new-password">
           </label>
           
           <label class="confirm-password">
             <span>Confirm Password</span>
             <input 
+            id="confirm-password"
             class="fill-out-form" 
             required type="password" 
             name="confirm-password" 
             minlength="8" 
-            placeholder="Confirm password">
+            placeholder="Confirm your password"
+            autocomplete="new-password">
           </label>
           
-          <label class="country">
+          <label class="country" for="country-select">
             <span>Country</span>
-              <select type="text" name="country">
+              <select id="country-select" name="country">
+              <option value="" disabled selected>Select your country</option>
               <option value="SE">Sweden</option>
-              <option value="SE">Norway</option>
-              <option value="SE">Finland</option>
-              <option value="SE">Denmark</option>
-              <option value="SE">Iceland</option>
+              <option value="NO">Norway</option>
+              <option value="FI">Finland</option>
+              <option value="DK">Denmark</option>
+              <option value="IS">Iceland</option>
             </select>
           </label>
          
@@ -119,41 +133,44 @@
         
             
         <fieldset class="contact-method">
-          <div class="contact-method-container">
-            <legend>Please select your preferred contact method:</legend>
+          <legend>Please select your preferred contact method:</legend>
+            <div class="contact-method-container">
+           
             
-            <div class="radio-button-container">
-              
-              <div class="radio-button-box">
-                <input
-                type="radio"
-                id="contact-choice-1"
-                name="contact"
-                value="email"
-                checked />
-                <label for="contactChoice1">Email</label>
+              <div class="radio-button-container">
+                
+                <div class="radio-button-box" >
+                  <input
+                  type="radio"
+                  id="contact-choice-1"
+                  name="contact"
+                  value="email"
+                  checked
+                  aria-label="Email contact option" />
+                  <label for="contact-choice-1">Email</label>
+                </div>
+                
+                <div class="radio-button-box">
+                  <input 
+                  type="radio" 
+                  id="contact-choice-2" 
+                  name="contact" 
+                  value="phone"
+                  aria-label="Phone contact option" />
+                  <label for="contact-choice-2">Phone</label>
+                </div>
+                
+                <div class="radio-button-box">
+                  <input 
+                  type="radio" 
+                  id="contact-choice-3" 
+                  name="contact" 
+                  value="mail"
+                  aria-label="Mail contact option" />
+                  <label for="contact-choice-3">Mail</label>
+                </div>
               </div>
-              
-              <div class="radio-button-box">
-                <input 
-                type="radio" 
-                id="contact-choice-2" 
-                name="contact" 
-                value="phone" />
-                <label for="contactChoice2">Phone</label>
-              </div>
-              
-              <div class="radio-button-box">
-                <input 
-                type="radio" 
-                id="contact-choice-3" 
-                name="contact" 
-                value="mail" />
-                <label for="contactChoice3">Mail</label>
-              </div>
-            
             </div>
-          </div>
         </fieldset>
 
         
@@ -170,11 +187,13 @@
             
             
         <fieldset class="agreement">
+          <legend>Agreement</legend>
           
           <div class="agreement-box">
             <input
             type="checkbox" id="terms" 
-            name="terms" />
+            name="terms" 
+            required />
             <label for="terms">I agree to the <a href="#">Terms</a> and <a href="#"> Privacy Policy.</a></label>
           </div>
               
@@ -206,7 +225,7 @@
       <footer>
         <div class="personal-info">
           
-          <img src="./assets/flow-movement-logo.png" alt="flow-movement-logo">
+          <img src="./assets/flow-movement-logo.png" alt="Flow movement company logo">
           <div class="personal-info-links">
             <i style="font-size:24px" class="fa">&#xf09b;</i>
             <i style="font-size:24px" class="fa">&#xf08c;</i>
