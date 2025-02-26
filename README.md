@@ -10,3 +10,5 @@ With more time I would have a video in my hero section, a menu and a footer that
 ## View it live
 
 https://flow-movement.netlify.app/
+
+this is the a11y version
